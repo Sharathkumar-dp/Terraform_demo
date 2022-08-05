@@ -4,10 +4,7 @@ sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 sudo yum -y install terraform
 
-
-#!/bin/bash
-sudo yum update -y
-sudo yum install httpd -y
-sudo service httpd start
-sudo service enable httpd
-echo " Hello World from terraform Demo host -  $(hostname -f)  " > /var/www/html/index.html
+sudo yum install git -y
+sudo mkdir terraform_demo
+sudo cd terraform_demo
+sudo git clone https://github.com/Sharathkumar-dp/Terraform_demo.git

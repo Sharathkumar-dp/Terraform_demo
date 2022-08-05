@@ -98,6 +98,12 @@ resource "aws_security_group" "demo_sg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  egress {
+         from_port   = 0
+         to_port     = 0
+         protocol    = "-1"
+         cidr_blocks = ["0.0.0.0/0"]
+       }
   tags = {
     Name = "demo_sg"
   }
@@ -129,7 +135,7 @@ resource "aws_instance" "demo_instance2" {
     Name = "demo_instance2"
   }
   user_data = "${file("userdata.sh")}"
-
+}
 resource "tls_private_key" "demo_ssh" {
   algorithm = "RSA"
   rsa_bits  = 4096

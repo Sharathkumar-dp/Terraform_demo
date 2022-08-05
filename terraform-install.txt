@@ -7,4 +7,4 @@ sudo yum -y install terraform
 sudo yum install git -y
 sudo mkdir terraform_demo
 sudo cd terraform_demo
-sudo git clone https://github.com/Sharathkumar-dp/Terraform_demo.git
+sudo git clone https://github.com/Sharathkumar-dp/terraform_demo.git
